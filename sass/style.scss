@@ -1,0 +1,47 @@
+@use "globals" as g;
+@use "pricing";
+@use "buttons";
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: g.$pale-blue url("../assets/pattern-background-mobile.svg") no-repeat left;
+  background-size: cover;
+
+  @include g.breakpoints(tablet) {
+    background: g.$pale-blue url("../assets/pattern-background-desktop.svg") no-repeat top;
+    background-size: contain;
+  }
+}
+
+.card {
+  border-radius: 20px;
+  background-color: white;
+  width: min(320px, 90%);
+  overflow: hidden;
+
+  @include g.breakpoints(monitor) {
+    width: min(380px, 90%);
+  }
+
+  &-main {
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+    &__title {
+      font-weight: 900;
+      color: g.$dark-blue-2;
+    }
+
+    &__description {
+      color: g.$desaturated-blue;
+      font-weight: 500;
+    }
+  }
+}

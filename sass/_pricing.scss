@@ -1,0 +1,47 @@
+@use "globals" as g;
+
+.pricing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: g.$very-pale-blue;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 14px;
+
+  li:nth-child(1) {
+    display: flex;
+    align-items: center;
+
+    p:nth-child(1) {
+      font-weight: 900;
+      margin-bottom: 0.3rem;
+      color: g.$dark-blue-2;
+    }
+
+    p:nth-child(2) {
+      color: g.$desaturated-blue;
+    }
+  }
+
+  li:nth-child(1)::before {
+    // display: flex;
+    content: url("../assets/icon-music.svg");
+    margin-right: 1rem;
+  }
+
+  li:nth-child(2) {
+    a {
+      text-decoration: underline;
+      font-weight: 700;
+      color: g.$dark-blue;
+      text-underline-offset: 3px;
+      transition: all 0.5s;
+
+      &:hover {
+        text-decoration: none;
+        color: g.$dark-blue-hover;
+      }
+    }
+  }
+}

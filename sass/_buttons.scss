@@ -1,0 +1,32 @@
+@use "globals" as g;
+
+.pay-btn {
+  display: block;
+  background-color: g.$dark-blue;
+  padding: 1rem 0;
+  text-align: center;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+  //   letter-spacing: 1px;
+  transition: all 0.5s;
+
+  &:hover {
+    background-color: g.$dark-blue-hover;
+  }
+}
+
+.cancel-btn {
+  font-size: 14px;
+  background: none;
+  outline: none;
+  border: none;
+  color: g.$desaturated-blue;
+  font-weight: 900;
+  transition: all 0.5s;
+
+  &:hover {
+    color: g.$dark-blue-2;
+  }
+}
